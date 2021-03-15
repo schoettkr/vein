@@ -1,0 +1,72 @@
+local function map(mode, lhs, rhs, opts)
+    local options = {noremap = true}
+    if opts then
+        options = vim.tbl_extend("force", options, opts)
+    end
+    vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+end
+
+local function cmd(mode, lhs, cmd_string, opts)
+  map(mode, lhs, ("<Cmd>%s<CR>"):format(cmd_string), opts)
+end
+
+
+-- LSP
+cmd("", "gd", "lua vim.lsp.buf.definition()")
+cmd("", "gD", "lua vim.lsp.buf.declaration()")
+cmd("", "gr", "lua vim.lsp.buf.references()")
+cmd("", "gh", "lua vim.lsp.buf.hover()")
+cmd("", "gi", "lua vim.lsp.buf.implementation()")
+cmd("", "<leader>gp", "lua vim.lsp.diagnostic.goto_prev()")
+cmd("", "<leader>gn", "lua vim.lsp.diagnostic.goto_next()")
+cmd("", "<leader>ep", "lua vim.lsp.diagnostic.goto_prev()")
+cmd("", "<leader>en", "lua vim.lsp.diagnostic.goto_next()")
+cmd("", "<leader>ca", "lua vim.lsp.buf.code_action()")
+
+-- Compe
+vim.cmd("inoremap <silent><expr> <CR> compe#confirm('<CR>')")
+
+-- Nvim Tree
+cmd("", "<leader>ft" , "NvimTreeFindFile")
+cmd("", "<leader>ad" , "NvimTreeFindFile")
+
+-- Telescope
+cmd("", "<leader>bb", "Telescope buffers")
+cmd("", "<leader>ff", "Telescope file_browser")
+cmd("", "<leader>fr", "Telescope oldfiles")
+cmd("", "<leader>pp", "Telescope git_files")
+cmd("", "<leader>p.", "Telescope find_files")
+cmd("", "<leader>p/", "Telescope live_grep")
+cmd("", "<leader>/",  "Telescope current_buffer_fuzzy_find")
+cmd("", "<leader>rr", "Telescope registers")
+
+-- Win Layout
+-- map("", "<leader>wu", "<Plug>(WinlayoutBackward)")
+-- cmd("", "<leader>wr", "WinlayoutForward")
+-- vim.api.nvim_exec('nnoremap <F3> <Plug>(WinlayoutBackward)', false)
+-- nmap <F4> <Plug>(WinlayoutForward)
+
+
+-- Vanilla VIM
+cmd("", "<leader><tab>",  "b#")
+cmd("", "<leader>fs", "up")
+cmd("", "<C-s>", "up")
+cmd("", "<Bslash>", "noh")
+cmd("", "<leader>bd", "bdelete")
+cmd("", "<leader>d",  "bdelete")
+cmd("", "<leader>ws", "split")
+cmd("", "<leader>wv", "vsplit")
+cmd("", "<leader>wd", "close")
+cmd("", "<leader>wm", "only")
+cmd("", "<leader>qq", "quitall")
+map("", "<leader>wl", "<C-w>l")
+map("", "<leader>wh", "<C-w>h")
+map("", "<leader>wj", "<C-w>j")
+map("", "<leader>wk", "<C-w>k")
+map("", "<leader>1",  "1<C-w>w")
+map("", "<leader>2",  "2<C-w>w")
+map("", "<leader>3",  "3<C-w>w")
+map("", "<leader>4",  "4<C-w>w")
+map("", "<leader>5",  "5<C-w>w")
+map("", "<leader>6",  "6<C-w>w")
+
