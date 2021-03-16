@@ -9,7 +9,7 @@ cmd "syntax on"
 -- vim.cmd "hi Normal guibg=#0a0a0"
 
 -- highlights
-cmd("hi Normal guibg=#292C3E")
+cmd("hi Normal guibg=#32374d")
 cmd("hi LineNr guibg=NONE")
 cmd("hi SignColumn guibg=NONE")
 cmd("hi VertSplit guibg=NONE")
