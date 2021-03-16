@@ -24,3 +24,4 @@ git clone https://github.com/wbthomason/packer.nvim\
 
 - Hat tip to [siduck76](https://github.com/siduck76) and his [neovim dots](https://github.com/siduck76/neovim-dots) which inspired this!
 - also parts of this are just straight out copied from the above and from https://github.com/glepnir/nvim
+- further inspiration at https://github.com/ChristianChiarulli/nvcode
