@@ -30,3 +30,9 @@ augroup SyntaxSettings
 augroup END
 ]],
 false)
+
+vim.api.nvim_exec(
+[[
+autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
+]],
+false)
