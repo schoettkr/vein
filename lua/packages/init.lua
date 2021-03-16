@@ -26,8 +26,10 @@ function packages.load()
       use {"nvim-treesitter/nvim-treesitter"}
       -- highlight colors in their respective colors
       use {"norcalli/nvim-colorizer.lua"}
+      -- nice dashboard on start
+      use {'mhinz/vim-startify'}
       -- indendation guides
-      use { 'Yggdroot/indentLine'}
+      use {'Yggdroot/indentLine'}
       -- jump around!
       use {'easymotion/vim-easymotion'}
       -- gcc the bugs

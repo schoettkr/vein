@@ -8,6 +8,7 @@
 --]]
 --, false)
 
+require('modules.ui.startify')
 require('modules.ui.icons')
 require('modules.ui.statusline')
 require('modules.ui.theme')
