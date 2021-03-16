@@ -10,6 +10,8 @@ local function cmd(mode, lhs, cmd_string, opts)
   map(mode, lhs, ("<Cmd>%s<CR>"):format(cmd_string), opts)
 end
 
+-- Esearch
+vim.api.nvim_exec("nmap <leader>p/ <plug>(esearch)", false)
 
 -- LSP
 cmd("", "gd", "lua vim.lsp.buf.definition()")
@@ -36,7 +38,7 @@ cmd("", "<leader>ff", "Telescope file_browser")
 cmd("", "<leader>fr", "Telescope oldfiles")
 cmd("", "<leader>pp", "Telescope git_files")
 cmd("", "<leader>p.", "Telescope find_files")
-cmd("", "<leader>p/", "Telescope live_grep")
+-- cmd("", "<leader>p/", "Telescope live_grep")
 cmd("", "<leader>/",  "Telescope current_buffer_fuzzy_find")
 cmd("", "<leader>rr", "Telescope registers")
 

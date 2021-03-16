@@ -52,6 +52,8 @@ function packages.load()
       use {"nvim-telescope/telescope.nvim"}
       -- preview media files in telescope
       use {"nvim-telescope/telescope-media-files.nvim"}
+      -- OP search
+      use {"eugen0329/vim-esearch"}
 
       -- think about telescope-project, telescope-z
       
