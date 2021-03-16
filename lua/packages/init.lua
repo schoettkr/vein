@@ -44,6 +44,8 @@ function packages.load()
       use {"alvan/vim-closetag"}
       -- add vscode like pictograms to autocompletion dropdowns etc
       use {"onsails/lspkind-nvim"}
+      -- this shouldn't be possible
+      use {"tpope/vim-surround"}
       -- Find, Filter, Preview, Pick. Fuzzy find all the things!
       use {"nvim-telescope/telescope.nvim"}
       -- preview media files in telescope
