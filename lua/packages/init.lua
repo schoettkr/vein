@@ -36,8 +36,6 @@ function packages.load()
       use { 'tpope/vim-commentary'}
       -- code formatter
       use {"sbdchd/neoformat"}
-      -- git's got your back
-      use {'tpope/vim-fugitive'}
       -- common configurations for LSP
       use {"neovim/nvim-lspconfig"}
       -- autocompletion 
@@ -72,6 +70,8 @@ function packages.load()
       
       -- window history (seems to not work)
       -- use { 'habamax/vim-winlayout'}
+      -- git's got your back
+      -- use {'tpope/vim-fugitive'}
        
       -- git gutters and icons
       -- use {"lewis6991/gitsigns.nvim"}
