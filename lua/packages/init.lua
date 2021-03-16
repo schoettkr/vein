@@ -36,6 +36,8 @@ function packages.load()
       use { 'tpope/vim-commentary'}
       -- code formatter
       use {"sbdchd/neoformat"}
+      -- git's got your back
+      use {'tpope/vim-fugitive'}
       -- common configurations for LSP
       use {"neovim/nvim-lspconfig"}
       -- autocompletion 
