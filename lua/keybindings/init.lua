@@ -28,6 +28,9 @@ cmd("", "<leader>ca", "lua vim.lsp.buf.code_action()")
 -- Compe
 vim.cmd("inoremap <silent><expr> <CR> compe#confirm('<CR>')")
 
+-- Neogit
+cmd("n", "<leader>gs", "Neogit")
+
 -- Nvim Tree
 cmd("", "<leader>ft" , "NvimTreeFindFile")
 cmd("", "<leader>ad" , "NvimTreeFindFile")

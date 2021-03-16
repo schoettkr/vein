@@ -55,6 +55,8 @@ function packages.load()
       -- OP search
       use {"eugen0329/vim-esearch"}
 
+      -- git's got your back
+      use {'TimUntersberger/neogit'}
       -- think about telescope-project, telescope-z
       
       -------------
