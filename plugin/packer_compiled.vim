@@ -40,6 +40,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/eos/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
   },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/home/eos/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
+  },
   indentLine = {
     loaded = true,
     path = "/home/eos/.local/share/nvim/site/pack/packer/start/indentLine"
@@ -51,6 +55,10 @@ _G.packer_plugins = {
   neoformat = {
     loaded = true,
     path = "/home/eos/.local/share/nvim/site/pack/packer/start/neoformat"
+  },
+  neogit = {
+    loaded = true,
+    path = "/home/eos/.local/share/nvim/site/pack/packer/start/neogit"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -105,9 +113,25 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/eos/.local/share/nvim/site/pack/packer/start/vim-closetag"
   },
+  ["vim-commentary"] = {
+    loaded = true,
+    path = "/home/eos/.local/share/nvim/site/pack/packer/start/vim-commentary"
+  },
   ["vim-devicons"] = {
     loaded = true,
     path = "/home/eos/.local/share/nvim/site/pack/packer/start/vim-devicons"
+  },
+  ["vim-esearch"] = {
+    loaded = true,
+    path = "/home/eos/.local/share/nvim/site/pack/packer/start/vim-esearch"
+  },
+  ["vim-startify"] = {
+    loaded = true,
+    path = "/home/eos/.local/share/nvim/site/pack/packer/start/vim-startify"
+  },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/home/eos/.local/share/nvim/site/pack/packer/start/vim-surround"
   }
 }
 
