@@ -46,6 +46,7 @@ cmd("hi def NeogitHunkHeaderHighlight guifg=#FDF4C1 guibg=#61ACBB")
 
 -- lsp-highlights
 cmd("hi def LspDiagnosticsDefaultError guifg=#455a64")
+cmd("hi def LspDiagnosticsDefaultHint guifg=#546e7a")
 -- Below line has no effect, it should deactivate the underline of errors
 -- cmd("hi def LspDiagnosticsUnderlineError guifg=NONE ctermfg=NONE cterm=NONE gui=NONE")
 
