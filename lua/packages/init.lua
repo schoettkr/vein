@@ -81,6 +81,10 @@ function packages.load()
       
       -- window history (seems to not work)
       -- use { 'habamax/vim-winlayout'}
+
+      -- nice but ... i see no effect?
+      -- use {"kosayoda/nvim-lightbulb"}
+      -- use {"andymass/vim-matchup"}
        
     end
   )

@@ -3,6 +3,7 @@ require("modules.editor.gitgutters")
 require("modules.editor.treesitter")
 require("modules.editor.autopairs")
 require("modules.editor.formatter")
+-- require("modules.editor.lightbulb")
 
 -- vim.api.nvim_exec(
 -- [[
