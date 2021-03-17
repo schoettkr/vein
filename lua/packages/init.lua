@@ -59,6 +59,11 @@ function packages.load()
       use {'TimUntersberger/neogit'}
       use {"lewis6991/gitsigns.nvim"}
 
+      -- automatically adapt closing tags
+      use {"AndrewRadev/tagalong.vim"}
+      
+      use {"pelodelfuego/vim-swoop"}
+
       -- think about telescope-project, telescope-z
       
       -------------
