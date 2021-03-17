@@ -53,6 +53,7 @@ cmd("", "<leader>rr", "Telescope registers")
 
 
 -- Vanilla VIM
+cmd("", "<leader>at",  "!alacritty")
 cmd("", "<leader><tab>",  "b#")
 cmd("", "<leader>fs", "up")
 cmd("", "<C-s>", "up")
