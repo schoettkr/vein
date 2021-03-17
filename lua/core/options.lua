@@ -30,10 +30,10 @@ function options.load()
     wildignore     = ".git,.hg,.svn,*.pyc,*.o,*.out,*.jpg,*.jpeg,*.png,*.gif,*.zip,**/tmp/**,*.DS_Store,**/node_modules/**,**/bower_modules/**";
     backup         = false;
     writebackup    = false;
-    undofile       = true;
+    undofile       = false;
     swapfile       = false;
     directory      = global.cache_dir .. "swag/";
-    undodir        = global.cache_dir .. "undo/";
+    -- undodir        = global.cache_dir .. "undo/";
     backupdir      = global.cache_dir .. "backup/";
     viewdir        = global.cache_dir .. "view/";
     spellfile      = global.cache_dir .. "spell/en.uft-8.add";
