@@ -13,17 +13,31 @@ cmd("hi Normal guibg=#32374d")
 cmd("hi LineNr guibg=NONE")
 cmd("hi SignColumn guibg=NONE")
 cmd("hi VertSplit guibg=NONE")
--- cmd("highlight DiffAdd guifg=#81A1C1 guibg = none")
--- cmd("highlight DiffChange guifg =#3A3E44 guibg = none")
--- cmd("highlight DiffModified guifg = #81A1C1 guibg = none")
 cmd("hi EndOfBuffer guifg=#282c34")
 
+-- telescope highlights
 cmd("highlight TelescopeBorder   guifg=#3e4451")
 cmd("highlight TelescopePromptBorder   guifg=#3e4451")
 cmd("highlight TelescopeResultsBorder  guifg=#3e4451")
 cmd("highlight TelescopePreviewBorder  guifg=#525865")
+
+-- completion dropdown highlights
 cmd("highlight PmenuSel  guibg=#98c379")
 
 -- tree folder name , icon color
 cmd("highlight NvimTreeFolderIcon guifg = #61afef")
 cmd("highlight NvimTreeFolderName guifg = #61afef")
+
+
+-- neogit highlights
+cmd("hi def NeogitDiffAdd guibg=#324C51 guifg=#00d188")
+cmd("hi def NeogitDiffAddHighlight guibg=#008758 guifg=#fdf4c1")
+
+cmd("hi def NeogitDiffDelete guibg=#ab4060 guifg=#87003f")
+cmd("hi def NeogitDiffDeleteHighlight guibg=#c9005e guifg=#fdf4c1")
+
+cmd("hi def NeogitDiffContextHighlight ctermbg=4 guibg=#32374d")
+cmd("hi def NeogitHunkHeader guifg=#d0d0d0 guibg=#263854")
+cmd("hi def NeogitHunkHeaderHighlight guifg=#FDF4C1 guibg=#61ACBB")
+
+
