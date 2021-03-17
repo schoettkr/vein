@@ -40,7 +40,7 @@ cmd("", "<leader>ad" , "NvimTreeFindFile")
 
 -- Telescope
 cmd("", "<leader>bb", "Telescope buffers")
-cmd("", "<leader>ff", "Telescope file_browser")
+cmd("", "<leader>ff", "Telescope file_browser hidden=true")
 cmd("", "<leader>fr", "Telescope oldfiles")
 cmd("", "<leader>pp", "Telescope git_files")
 cmd("", "<leader>p.", "Telescope find_files")
