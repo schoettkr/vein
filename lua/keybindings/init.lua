@@ -57,10 +57,8 @@ vim.api.nvim_exec("vmap <leader>B/ :call SwoopMultiSelection()<CR>", false)
 
 
 -- Win Layout
--- map("", "<leader>wu", "<Plug>(WinlayoutBackward)")
--- cmd("", "<leader>wr", "WinlayoutForward")
--- vim.api.nvim_exec('nnoremap <F3> <Plug>(WinlayoutBackward)', false)
--- nmap <F4> <Plug>(WinlayoutForward)
+vim.api.nvim_exec('nmap <leader>wu <Plug>(WinlayoutBackward)', false)
+vim.api.nvim_exec('nmap <leader>wr <Plug>(WinlayoutForward)', false)
 
 
 -- Vanilla VIM

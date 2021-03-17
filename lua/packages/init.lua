@@ -62,7 +62,11 @@ function packages.load()
       -- automatically adapt closing tags
       use {"AndrewRadev/tagalong.vim"}
       
+      -- i miss you swiper
       use {"pelodelfuego/vim-swoop"}
+
+      -- window history (seems to not work)
+      use { 'habamax/vim-winlayout'}
 
       -- think about telescope-project, telescope-z
       
@@ -79,9 +83,6 @@ function packages.load()
       -- autosave
       -- use {"907th/vim-auto-save"}
       
-      -- window history (seems to not work)
-      -- use { 'habamax/vim-winlayout'}
-
       -- nice but ... i see no effect?
       -- use {"kosayoda/nvim-lightbulb"}
       -- use {"andymass/vim-matchup"}
