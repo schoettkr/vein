@@ -52,6 +52,8 @@ function packages.load()
       use {"nvim-telescope/telescope-media-files.nvim"}
       -- OP search
       use {"eugen0329/vim-esearch"}
+      -- easy motion on steroids
+      use {"phaazon/hop.nvim"}
 
       -- git's got your back
       use {'TimUntersberger/neogit'}

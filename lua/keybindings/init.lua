@@ -28,6 +28,9 @@ cmd("", "<leader>ca", "lua vim.lsp.buf.code_action()")
 -- Compe
 vim.cmd("inoremap <silent><expr> <CR> compe#confirm('<CR>')")
 
+-- Hop
+vim.api.nvim_set_keymap('n', '<leader><leader>', ":HopChar1<cr>", {})
+
 -- Neogit
 cmd("n", "<leader>gs", "Neogit")
 
