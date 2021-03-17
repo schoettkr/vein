@@ -104,6 +104,32 @@ gls.left[4] = {
     separator_highlight = {colors.section_bg, colors.bg},
   }
 }
+
+gls.left[5] = {
+  DiffAdd = {
+    provider = 'DiffAdd',
+    condition = checkwidth,
+    icon = ' ',
+    highlight = { colors.green, colors.bg },
+  }
+}
+gls.left[6] = {
+  DiffModified = {
+    provider = 'DiffModified',
+    condition = checkwidth,
+    icon = ' ',
+    highlight = { colors.orange, colors.bg },
+  }
+}
+gls.left[7] = {
+  DiffRemove = {
+    provider = 'DiffRemove',
+    condition = checkwidth,
+    icon = ' ',
+    highlight = { colors.red,colors.bg },
+  }
+}
+
 -- gls.left[5] = {
 --   GitIcon = {
 --     provider = function() return '  ' end,
