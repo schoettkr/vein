@@ -30,8 +30,6 @@ function packages.load()
       use {'mhinz/vim-startify'}
       -- indendation guides
       use {'Yggdroot/indentLine'}
-      -- jump around!
-      use {'easymotion/vim-easymotion'}
       -- gcc the bugs
       use { 'tpope/vim-commentary'}
       -- code formatter
