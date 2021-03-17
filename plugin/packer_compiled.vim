@@ -44,6 +44,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/eos/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
   },
+  ["hop.nvim"] = {
+    loaded = true,
+    path = "/home/eos/.local/share/nvim/site/pack/packer/start/hop.nvim"
+  },
   indentLine = {
     loaded = true,
     path = "/home/eos/.local/share/nvim/site/pack/packer/start/indentLine"
@@ -101,6 +105,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/eos/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
+  ["tagalong.vim"] = {
+    loaded = true,
+    path = "/home/eos/.local/share/nvim/site/pack/packer/start/tagalong.vim"
+  },
   ["telescope-media-files.nvim"] = {
     loaded = true,
     path = "/home/eos/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim"
@@ -132,6 +140,14 @@ _G.packer_plugins = {
   ["vim-surround"] = {
     loaded = true,
     path = "/home/eos/.local/share/nvim/site/pack/packer/start/vim-surround"
+  },
+  ["vim-swoop"] = {
+    loaded = true,
+    path = "/home/eos/.local/share/nvim/site/pack/packer/start/vim-swoop"
+  },
+  ["vim-winlayout"] = {
+    loaded = true,
+    path = "/home/eos/.local/share/nvim/site/pack/packer/start/vim-winlayout"
   }
 }
 

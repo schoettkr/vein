@@ -54,17 +54,15 @@ function packages.load()
       use {"eugen0329/vim-esearch"}
       -- easy motion on steroids
       use {"phaazon/hop.nvim"}
-
+      -- jump between more matching things with %
+      use {"andymass/vim-matchup"}
       -- git's got your back
       use {'TimUntersberger/neogit'}
       use {"lewis6991/gitsigns.nvim"}
-
       -- automatically adapt closing tags
       use {"AndrewRadev/tagalong.vim"}
-      
       -- i miss you swiper
       use {"pelodelfuego/vim-swoop"}
-
       -- window history (seems to not work)
       use { 'habamax/vim-winlayout'}
 
@@ -85,7 +83,6 @@ function packages.load()
       
       -- nice but ... i see no effect?
       -- use {"kosayoda/nvim-lightbulb"}
-      -- use {"andymass/vim-matchup"}
        
     end
   )
