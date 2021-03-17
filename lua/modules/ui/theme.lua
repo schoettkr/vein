@@ -22,7 +22,8 @@ cmd("highlight TelescopeResultsBorder  guifg=#3e4451")
 cmd("highlight TelescopePreviewBorder  guifg=#525865")
 
 -- completion dropdown highlights
-cmd("highlight PmenuSel  guibg=#98c379")
+cmd("highlight Pmenu guibg=#292d3e")
+cmd("highlight PmenuSel guibg=#61acbb guifg=#fdf4c1")
 
 -- tree folder name , icon color
 cmd("highlight NvimTreeFolderIcon guifg = #61afef")
