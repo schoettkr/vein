@@ -63,7 +63,7 @@ vim.api.nvim_exec('nmap <leader>wr <Plug>(WinlayoutForward)', false)
 
 -- Vanilla VIM
 cmd("", "<leader>Q",  "q!")
-cmd("", "<leader>at",  "!alacritty")
+cmd("", "<leader>at",  "!alacritty &|")
 cmd("", "<leader><tab>",  "b#")
 cmd("", "<leader>fs", "up")
 cmd("", "<C-s>", "up")
