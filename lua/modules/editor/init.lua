@@ -1,4 +1,5 @@
 require("modules.editor.lsp")
+require("modules.editor.gitgutters")
 require("modules.editor.treesitter")
 require("modules.editor.autopairs")
 require("modules.editor.formatter")

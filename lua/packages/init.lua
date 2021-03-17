@@ -57,6 +57,8 @@ function packages.load()
 
       -- git's got your back
       use {'TimUntersberger/neogit'}
+      use {"lewis6991/gitsigns.nvim"}
+
       -- think about telescope-project, telescope-z
       
       -------------
@@ -74,11 +76,7 @@ function packages.load()
       
       -- window history (seems to not work)
       -- use { 'habamax/vim-winlayout'}
-      -- git's got your back
-      -- use {'tpope/vim-fugitive'}
        
-      -- git gutters and icons
-      -- use {"lewis6991/gitsigns.nvim"}
     end
   )
 end
