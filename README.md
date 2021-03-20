@@ -26,3 +26,9 @@ git clone https://github.com/wbthomason/packer.nvim\
 - also parts of this are just straight out copied from the above and from https://github.com/glepnir/nvim
 - further inspiration at https://github.com/ChristianChiarulli/nvcode
 - https://github.com/rockerBOO/awesome-neovim
+
+## Todos
+
+- <leader>t bindings for tab interaction
+- lsp diagnostics underline deactivate or more subtle (possible to deactivate
+  the reformat?!)
