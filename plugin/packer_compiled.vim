@@ -133,6 +133,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/eos/.local/share/nvim/site/pack/packer/start/vim-esearch"
   },
+  ["vim-matchup"] = {
+    loaded = true,
+    path = "/home/eos/.local/share/nvim/site/pack/packer/start/vim-matchup"
+  },
   ["vim-startify"] = {
     loaded = true,
     path = "/home/eos/.local/share/nvim/site/pack/packer/start/vim-startify"
