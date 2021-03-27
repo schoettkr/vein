@@ -88,6 +88,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/eos/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
   },
+  ["nvim-ts-autotag"] = {
+    loaded = true,
+    path = "/home/eos/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/eos/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
@@ -105,10 +109,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/eos/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
-  ["tagalong.vim"] = {
-    loaded = true,
-    path = "/home/eos/.local/share/nvim/site/pack/packer/start/tagalong.vim"
-  },
   ["telescope-media-files.nvim"] = {
     loaded = true,
     path = "/home/eos/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim"
@@ -116,10 +116,6 @@ _G.packer_plugins = {
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/eos/.local/share/nvim/site/pack/packer/start/telescope.nvim"
-  },
-  ["vim-closetag"] = {
-    loaded = true,
-    path = "/home/eos/.local/share/nvim/site/pack/packer/start/vim-closetag"
   },
   ["vim-commentary"] = {
     loaded = true,

@@ -28,7 +28,7 @@ vim.api.nvim_exec(
 [[
 augroup SyntaxSettings
     autocmd!
-    autocmd BufNewFile,BufRead *.tsx set filetype=typescript.typescriptreact
+    autocmd BufNewFile,BufRead *.tsx set filetype=typescriptreact
 augroup END
 ]],
 false)
