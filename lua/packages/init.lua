@@ -59,6 +59,8 @@ function packages.load()
       use { 'habamax/vim-winlayout'}
       -- autoclose/complete/adapt tags
       use {"windwp/nvim-ts-autotag"}
+      -- correctly comment in .tsx/.jsx
+      use {"JoosepAlviste/nvim-ts-context-commentstring"}
 
       -- think about telescope-project, telescope-z
       
@@ -69,6 +71,9 @@ function packages.load()
       use {"nvim-telescope/telescope.nvim"}
       -- preview media files in telescope
       use {"nvim-telescope/telescope-media-files.nvim"}
+
+
+
 
 
       ---------------------------
