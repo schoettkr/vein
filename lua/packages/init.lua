@@ -29,7 +29,7 @@ function packages.load()
       -- nice dashboard on start
       use {'mhinz/vim-startify'}
       -- indendation guides
-      use {'Yggdroot/indentLine'}
+      use {'Yggdroot/indentLine'} -- maybe switch to indent-blankline ?
       -- gcc the bugs
       use { 'tpope/vim-commentary'}
       -- code formatter
@@ -69,10 +69,6 @@ function packages.load()
       use {"nvim-telescope/telescope.nvim"}
       -- preview media files in telescope
       use {"nvim-telescope/telescope-media-files.nvim"}
-
-
-
-
 
 
       ---------------------------
