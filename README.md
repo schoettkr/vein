@@ -1,6 +1,6 @@
 # Vein
 
-Let vim flow through your vains!
+Let vim flow through your veins!
 
 ## Getting Started
 
