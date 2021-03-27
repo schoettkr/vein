@@ -46,10 +46,6 @@ function packages.load()
       use {"onsails/lspkind-nvim"}
       -- this shouldn't be possible
       use {"tpope/vim-surround"}
-      -- Find, Filter, Preview, Pick. Fuzzy find all the things!
-      use {"nvim-telescope/telescope.nvim"}
-      -- preview media files in telescope
-      use {"nvim-telescope/telescope-media-files.nvim"}
       -- OP search
       use {"eugen0329/vim-esearch"}
       -- easy motion on steroids
@@ -68,9 +64,22 @@ function packages.load()
 
       -- think about telescope-project, telescope-z
       
-      -------------
-      -- Others  --
-      -------------
+      ---------------------------
+      -- Experimental  --
+      ---------------------------
+      -- Find, Filter, Preview, Pick. Fuzzy find all the things!
+      use {"nvim-telescope/telescope.nvim"}
+      -- preview media files in telescope
+      use {"nvim-telescope/telescope-media-files.nvim"}
+
+
+
+
+
+
+      ---------------------------
+      -- Others | Deactivated  --
+      ---------------------------
 
       -- analyze plugins time taken to startup .. not needed for now
       -- use {"tweekmonster/startuptime.vim"}
