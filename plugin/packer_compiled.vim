@@ -92,6 +92,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/eos/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag"
   },
+  ["nvim-ts-context-commentstring"] = {
+    loaded = true,
+    path = "/home/eos/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/eos/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
