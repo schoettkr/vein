@@ -30,10 +30,10 @@ require "compe".setup {
     max_menu_width = 100,
     documentation = true,
     source = {
+        nvim_lsp = true,
         path = true,
         buffer = true,
         calc = true,
-        nvim_lsp = true,
         nvim_lua = true,
         spell = true,
         tags = true,

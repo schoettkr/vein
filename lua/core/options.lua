@@ -65,7 +65,6 @@ function options.load()
     switchbuf      = "useopen";
     backspace      = "indent,eol,start";
     diffopt        = "filler,iwhite,internal,algorithm:patience";
-    completeopt    = "menuone,noselect";
     jumpoptions    = "stack";
     showmode       = false;
     shortmess      = "aoOTIcF";
