@@ -45,14 +45,14 @@ cmd("", "<leader>fr", "Telescope oldfiles")
 cmd("", "<leader>pp", "Telescope git_files")
 cmd("", "<leader>p.", "Telescope find_files")
 -- cmd("", "<leader>p/", "Telescope live_grep")
-cmd("", "<leader>/",  "Telescope current_buffer_fuzzy_find")
+-- cmd("", "<leader>/",  "Telescope current_buffer_fuzzy_find")
 cmd("", "<leader>rr", "Telescope registers")
 
 -- Swoop
 -- cmd("n", "<leader>/", "call Swoop()")
-vim.api.nvim_exec("nmap <leader>b/ :call Swoop()<CR>", false)
+vim.api.nvim_exec("nmap <leader>/ :call Swoop()<CR>", false)
 vim.api.nvim_exec("nmap <leader>B/ :call SwoopMulti()<CR>", false)
-vim.api.nvim_exec("vmap <leader>b/ :call SwoopSelection()<CR>", false)
+vim.api.nvim_exec("vmap <leader>/ :call SwoopSelection()<CR>", false)
 vim.api.nvim_exec("vmap <leader>B/ :call SwoopMultiSelection()<CR>", false)
 
 

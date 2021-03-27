@@ -42,3 +42,5 @@ require "compe".setup {
         treesitter = false
     }
 }
+
+-- require 'lsp_signature'.on_attach()

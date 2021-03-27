@@ -63,7 +63,7 @@ function packages.load()
       use {"AndrewRadev/tagalong.vim"}
       -- i miss you swiper
       use {"pelodelfuego/vim-swoop"}
-      -- window history (seems to not work)
+      -- window history
       use { 'habamax/vim-winlayout'}
 
       -- think about telescope-project, telescope-z
@@ -83,6 +83,12 @@ function packages.load()
       
       -- nice but ... i see no effect?
       -- use {"kosayoda/nvim-lightbulb"}
+
+
+      
+      -- signature hints for autocompletion
+      -- check https://www.reddit.com/r/neovim/comments/mdy1c8/function_signature_autocompletion_with_nvimcompe/ to see if still necessary
+      -- use {'ray-x/lsp_signature.nvim'}
        
     end
   )
