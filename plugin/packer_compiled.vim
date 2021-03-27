@@ -36,6 +36,18 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/eos/.local/share/nvim/site/pack/packer/start/base16-vim"
   },
+  ["findr.vim"] = {
+    loaded = true,
+    path = "/home/eos/.local/share/nvim/site/pack/packer/start/findr.vim"
+  },
+  fzf = {
+    loaded = true,
+    path = "/home/eos/.local/share/nvim/site/pack/packer/start/fzf"
+  },
+  ["fzf.vim"] = {
+    loaded = true,
+    path = "/home/eos/.local/share/nvim/site/pack/packer/start/fzf.vim"
+  },
   ["galaxyline.nvim"] = {
     loaded = true,
     path = "/home/eos/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"

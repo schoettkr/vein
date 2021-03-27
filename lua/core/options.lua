@@ -12,7 +12,7 @@ end
 
 function options.load()
   local global_local = {
-    autochdir      = true;
+    -- autochdir      = true;
     termguicolors  = true;
     mouse          = "nv";
     errorbells     = false;

@@ -19,3 +19,5 @@ vim.g.startify_list_order = {
        {'   These are my bookmarks:'},
        'bookmarks',
        }
+
+vim.g.startify_change_to_dir = 0

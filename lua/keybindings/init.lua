@@ -11,7 +11,7 @@ local function cmd(mode, lhs, cmd_string, opts)
 end
 
 -- Esearch
-vim.api.nvim_exec("nmap <leader>p/ <plug>(esearch)", false)
+-- vim.api.nvim_exec("nmap <leader>p/ <plug>(esearch)", false)
 
 -- LSP
 cmd("", "gd", "lua vim.lsp.buf.definition()")
@@ -28,6 +28,17 @@ cmd("", "<leader>ca", "lua vim.lsp.buf.code_action()")
 -- Compe
 vim.cmd("inoremap <silent><expr> <CR> compe#confirm('<CR>')")
 
+-- Findr
+cmd("", "<leader>ff", "Findr")
+
+-- FZF
+cmd("", "<leader>bb", "FzfBuffers")
+cmd("", "<leader>fr", "FzfHistory")
+cmd("", "<leader>pp", "FzfFiles")
+cmd("", "<leader>p/", "FzfRg")
+cmd("", "<leader>'",  "FzfHistory:")
+cmd("", "<leader>/",  "FzfBLines")
+
 -- Hop
 vim.api.nvim_set_keymap('n', '<leader><leader>', ":HopChar1<cr>", {})
 
@@ -38,28 +49,9 @@ cmd("n", "<leader>gs", "Neogit")
 cmd("", "<leader>ft" , "NvimTreeFindFile")
 cmd("", "<leader>ad" , "NvimTreeFindFile")
 
--- Telescope
-cmd("", "<leader>bb", "Telescope buffers")
-cmd("", "<leader>ff", "Telescope file_browser hidden=true")
-cmd("", "<leader>fr", "Telescope oldfiles")
-cmd("", "<leader>pp", "Telescope git_files")
-cmd("", "<leader>p.", "Telescope find_files")
--- cmd("", "<leader>p/", "Telescope live_grep")
-cmd("", "<leader>/",  "Telescope current_buffer_fuzzy_find")
-cmd("", "<leader>rr", "Telescope registers")
-
--- Swoop
--- cmd("n", "<leader>/", "call Swoop()")
--- vim.api.nvim_exec("nmap <leader>/ :call Swoop()<CR>", false)
--- vim.api.nvim_exec("nmap <leader>B/ :call SwoopMulti()<CR>", false)
--- vim.api.nvim_exec("vmap <leader>/ :call SwoopSelection()<CR>", false)
--- vim.api.nvim_exec("vmap <leader>B/ :call SwoopMultiSelection()<CR>", false)
-
-
 -- Win Layout
 vim.api.nvim_exec('nmap <leader>wu <Plug>(WinlayoutBackward)', false)
 vim.api.nvim_exec('nmap <leader>wr <Plug>(WinlayoutForward)', false)
-
 
 -- Vanilla VIM
 cmd("", "<leader>Q",  "q!")

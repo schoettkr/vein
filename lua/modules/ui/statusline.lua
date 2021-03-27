@@ -47,7 +47,8 @@ local mode_color = function()
     R = colors.red,
   }
 
-  return mode_colors[vim.fn.mode()]
+
+    return mode_colors[vim.fn.mode()] or colors.orange
 end
 
 -- Left side
@@ -70,7 +71,7 @@ gls.left[2] = {
         R = 'REPLACE',
       }
       vim.api.nvim_command('hi GalaxyViMode guifg='..mode_color())
-      return alias[vim.fn.mode()]..' '
+      return (alias[vim.fn.mode()] or 'Other')..' '
     end,
     highlight = { colors.bg, colors.bg },
     separator = "  ",

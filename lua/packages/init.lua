@@ -72,9 +72,10 @@ function packages.load()
       -- preview media files in telescope
       use {"nvim-telescope/telescope-media-files.nvim"}
 
-
-
-
+      use {'conweller/findr.vim'}
+      use {"junegunn/fzf"}
+      use {"junegunn/fzf.vim"}
+      use {'airblade/vim-rooter'}
 
       ---------------------------
       -- Others | Deactivated  --
