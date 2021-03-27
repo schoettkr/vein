@@ -40,8 +40,6 @@ function packages.load()
       use {"hrsh7th/nvim-compe"}
       -- autpairing brackets, quotes, tags etc
       use {"windwp/nvim-autopairs"}
-      -- autoclose/complete open html tags
-      use {"alvan/vim-closetag"}
       -- add vscode like pictograms to autocompletion dropdowns etc
       use {"onsails/lspkind-nvim"}
       -- this shouldn't be possible
@@ -55,12 +53,12 @@ function packages.load()
       -- git's got your back
       use {'TimUntersberger/neogit'}
       use {"lewis6991/gitsigns.nvim"}
-      -- automatically adapt closing tags
-      use {"AndrewRadev/tagalong.vim"}
       -- i miss you swiper
       use {"pelodelfuego/vim-swoop"}
       -- window history
       use { 'habamax/vim-winlayout'}
+      -- autoclose/complete/adapt tags
+      use {"windwp/nvim-ts-autotag"}
 
       -- think about telescope-project, telescope-z
       
