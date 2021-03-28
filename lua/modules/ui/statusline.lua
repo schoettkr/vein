@@ -1,5 +1,7 @@
 local gl = require('galaxyline')
 
+function whitespace() return '  ' end
+
 function is_buffer_empty()
   -- Check whether the current buffer is empty
   return vim.fn.empty(vim.fn.expand('%:t')) == 1
@@ -16,7 +18,10 @@ gl.short_line_list = { 'defx', 'packager', 'vista' }
 -- Colors
 local colors = {
   bg = '#32374d',
+  bg_active = '#7e57c2',
+  bg_inactive = '#836fa9',
   fg = '#f8f8f2',
+  fg_muted = '#b8b8d2',
   section_bg = '#32374d',
   yellow = '#f1fa8c',
   cyan = '#8be9fd',
@@ -74,15 +79,15 @@ gls.left[2] = {
       return (alias[vim.fn.mode()] or 'Other')..' '
     end,
     highlight = { colors.bg, colors.bg },
-    separator = "  ",
-    separator_highlight = {colors.bg, colors.section_bg},
+    separator = " ",
+    separator_highlight = {colors.bg, colors.bg_active},
   },
 }
 gls.left[3] ={
   FileIcon = {
     provider = 'FileIcon',
     condition = buffer_not_empty,
-    highlight = { require('galaxyline.provider_fileinfo').get_file_icon_color, colors.section_bg },
+    highlight = { require('galaxyline.provider_fileinfo').get_file_icon_color, colors.bg_active },
   },
 }
 
@@ -100,9 +105,9 @@ gls.left[4] = {
   FileName = {
     provider = { 'FileName', 'LineColumn'},
     condition = buffer_not_empty,
-    highlight = { colors.fg, colors.section_bg },
+    highlight = { colors.fg, colors.bg_active },
     separator = " ",
-    separator_highlight = {colors.section_bg, colors.bg},
+    separator_highlight = {colors.bg_active, colors.bg_active},
   }
 }
 
@@ -111,7 +116,7 @@ gls.left[5] = {
     provider = 'DiffAdd',
     condition = checkwidth,
     icon = ' ',
-    highlight = { colors.green, colors.bg },
+    highlight = { colors.green, colors.bg_active },
   }
 }
 gls.left[6] = {
@@ -119,7 +124,7 @@ gls.left[6] = {
     provider = 'DiffModified',
     condition = checkwidth,
     icon = ' ',
-    highlight = { colors.orange, colors.bg },
+    highlight = { colors.orange, colors.bg_active },
   }
 }
 gls.left[7] = {
@@ -127,7 +132,7 @@ gls.left[7] = {
     provider = 'DiffRemove',
     condition = checkwidth,
     icon = ' ',
-    highlight = { colors.red,colors.bg },
+    highlight = { colors.red,colors.bg_active },
   }
 }
 
@@ -217,9 +222,9 @@ gls.right[1]= {
   FileFormat = {
     -- provider = function() return vim.bo.filetype end,
     provider = function () return ' ' end,
-    highlight = { colors.fg,colors.section_bg },
+    highlight = { colors.fg,colors.bg_active },
     separator = ' ',
-    separator_highlight = { colors.section_bg,colors.bg },
+    separator_highlight = { colors.bg_active,colors.bg_active },
   }
 }
 
@@ -227,7 +232,7 @@ gls.right[2] = {
   GitIcon = {
     provider = function() return '  ' end,
     condition = buffer_not_empty,
-    highlight = {colors.red,colors.bg},
+    highlight = {colors.red,colors.bg_active},
   }
 }
 
@@ -235,26 +240,26 @@ gls.right[3] = {
   GitBranch = {
     provider = 'GitBranch',
     condition = buffer_not_empty,
-    highlight = {colors.fg,colors.bg},
+    highlight = {colors.fg,colors.bg_active},
   }
 }
 
 gls.right[4] = {
   Heart = {
     provider = function() return ' ' end,
-    highlight = { colors.red, colors.section_bg },
+    highlight = { colors.red, colors.bg_active },
     separator = ' | ',
-    separator_highlight = { colors.bg, colors.section_bg },
+    separator_highlight = { colors.bg, colors.bg_active },
   }
 }
 
 -- Short status line
 gls.short_line_left[1] = {
   BufferType = {
-    provider = {vim.fn.winnr, function() return ' ' end, 'FileName'},
-    highlight = { colors.fg, colors.section_bg },
+    provider = {whitespace, vim.fn.winnr, whitespace, 'FileName'},
+    highlight = { colors.fg_muted, colors.bg_active },
     separator = ' ',
-    separator_highlight = { colors.section_bg, colors.bg },
+    separator_highlight = { colors.bg_active, colors.bg_inactive },
   }
 }
 
