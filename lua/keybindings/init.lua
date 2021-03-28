@@ -34,6 +34,7 @@ cmd("", "<leader>ff", "Findr")
 -- FZF
 cmd("", "<leader>bb", "FzfBuffers")
 cmd("", "<leader>fr", "FzfHistory")
+cmd("", "<leader>mm", "FzfMarks")
 cmd("", "<leader>pp", "FzfFiles")
 cmd("", "<leader>p/", "FzfRg")
 cmd("", "<leader>'",  "FzfHistory:")
