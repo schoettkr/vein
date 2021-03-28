@@ -149,6 +149,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/eos/.local/share/nvim/site/pack/packer/start/vim-matchup"
   },
+  ["vim-rooter"] = {
+    loaded = true,
+    path = "/home/eos/.local/share/nvim/site/pack/packer/start/vim-rooter"
+  },
   ["vim-startify"] = {
     loaded = true,
     path = "/home/eos/.local/share/nvim/site/pack/packer/start/vim-startify"
