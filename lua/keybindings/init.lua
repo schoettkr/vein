@@ -11,7 +11,7 @@ local function cmd(mode, lhs, cmd_string, opts)
 end
 
 -- Esearch
--- vim.api.nvim_exec("nmap <leader>p/ <plug>(esearch)", false)
+vim.api.nvim_exec("nmap <leader>P/ <plug>(esearch)", false)
 
 -- LSP
 cmd("", "gd", "lua vim.lsp.buf.definition()")
