@@ -33,7 +33,7 @@ function packages.load()
       -- gcc the bugs
       use { 'tpope/vim-commentary'}
       -- code formatter
-      use {"sbdchd/neoformat"}
+      -- use {"sbdchd/neoformat"}
       -- common configurations for LSP
       use {"neovim/nvim-lspconfig"}
       -- autocompletion 
@@ -52,7 +52,7 @@ function packages.load()
       use {"andymass/vim-matchup"}
       -- git's got your back
       use {'TimUntersberger/neogit'}
-      use {"lewis6991/gitsigns.nvim"}
+      -- use {"lewis6991/gitsigns.nvim"}
       -- i miss you swiper
       use {"pelodelfuego/vim-swoop"}
       -- window history
