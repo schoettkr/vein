@@ -29,7 +29,7 @@ cmd("", "<leader>ca", "lua vim.lsp.buf.code_action()")
 vim.cmd("inoremap <silent><expr> <CR> compe#confirm('<CR>')")
 
 -- Findr
-cmd("", "<leader>ff", "Findr")
+cmd("", "<leader>ff", "Telescope file_browser")
 
 -- FZF
 cmd("", "<leader>bb", "FzfBuffers")

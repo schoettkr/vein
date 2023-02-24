@@ -77,6 +77,7 @@ function packages.load()
       use {"junegunn/fzf.vim"}
       use {'airblade/vim-rooter'}
 
+      use { "nvim-telescope/telescope-file-browser.nvim" }
       ---------------------------
       -- Others | Deactivated  --
       ---------------------------

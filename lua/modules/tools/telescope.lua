@@ -1,3 +1,8 @@
+-- local status, telescope = pcall(require, "telescope")
+-- if not status then
+-- 	return
+-- end
+
 require("telescope").setup {
     defaults = {
         vimgrep_arguments = {
@@ -51,7 +56,22 @@ require("telescope").setup {
         media_files = {
             filetypes = {"png", "webp", "jpg", "jpeg"},
             find_cmd = "rg" -- find command (defaults to `fd`)
+        },
+        file_browser = {
+          theme = "ivy",
+          -- disables netrw and use telescope-file-browser in its place
+          hijack_netrw = true,
+          mappings = {
+            ["i"] = {
+              -- your custom insert mode mappings
+            },
+            ["n"] = {
+              -- your custom normal mode mappings
+            },
+          },
         }
     }
 }
 require("telescope").load_extension("media_files")
+require("telescope").load_extension("file_browser")
+-- telescope.load_extension("file_browser")
