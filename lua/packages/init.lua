@@ -18,6 +18,7 @@ function packages.load()
       use {"ryanoasis/vim-devicons"}
       -- color themes
       use {"chriskempson/base16-vim"}
+      use {"navarasu/onedark.nvim"}
       -- file tree
       use {"kyazdani42/nvim-tree.lua"}
       -- status line
