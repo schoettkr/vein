@@ -9,10 +9,11 @@ require("lspkind").init(
 require "lspconfig".tsserver.setup {}
 require "lspconfig".cssls.setup {}
 require "lspconfig".html.setup {}
+-- require("nvim-lsp-installer").setup {}
 
 
 -- Should NOT be called when using nvim-jdtls
-require "lspconfig".jdtls.setup {}
+-- require "lspconfig".jdtls.setup {}
 
 vim.o.completeopt = "menuone,noselect"
 
