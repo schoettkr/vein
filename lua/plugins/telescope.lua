@@ -15,7 +15,18 @@ return {
           },
         },
       }
-    }
+    },
+    config = function (_, _)
+      local telescope = require "telescope"
+
+      local opts = {
+        defaults = {
+          mappings = require('core.keybindings').telescope_mappings(),
+        }
+      }
+      telescope.setup(opts)
+
+    end
   },
   {
     'nvim-telescope/telescope-fzf-native.nvim',

@@ -66,24 +66,31 @@ vim.keymap.set('n', '<leader>p/', telescope.live_grep, { desc = 'Search string i
 vim.keymap.set('n', '<leader>pw', telescope.grep_string, { desc = 'Search string under cursor' })
 vim.keymap.set('n', '<leader>bb', telescope.buffers, { desc = 'Browse buffers' })
 vim.keymap.set('n', '<leader>/', telescope.current_buffer_fuzzy_find, { desc = 'Search in current buffer' })
+vim.keymap.set('n', '<leader>\'', telescope.resume, { desc = 'Resume last picker' })
+vim.keymap.set('n', '<C-c><C-o>', telescope.quickfix, { desc = 'Show quickfix list' })
+-- vim.keymap.set('n', '<C-c> <C-o>', telescope.quickfixhistory, { desc = 'Show quickfix history' })
 
-
--- vim.keymap.set('n', '<leader>fr', require('telescope.builtin').oldfiles, { desc = 'Find recently opened files' })
--- vim.keymap.set('n', '<leader>bb', require('telescope.builtin').buffers, { desc = 'Browse buffers' })
--- vim.keymap.set('n', '<leader>/', function()
-  -- You can pass additional configuration to telescope to change theme, layout, etc.
---   require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
---     winblend = 10,
---     previewer = false,
---   })
--- end, { desc = '[/] Fuzzily search in current buffer' })
--- vim.keymap.set('n', '<leader>pf', require('telescope.builtin').find_files, { desc = 'Find file' })
--- vim.keymap.set('n', '<leader>pp', require('telescope.builtin').find_files, { desc = 'Find file' })
--- vim.keymap.set('n', '<leader>hh', require('telescope.builtin').help_tags, { desc = 'Search help' })
--- vim.keymap.set('n', '<leader>pw', require('telescope.builtin').grep_string, { desc = '[S]earch current [W]ord' })
--- vim.keymap.set('n', '<leader>p/', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
--- vim.keymap.set('n', '<leader>hd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
-
+function telescope_mappings()
+    local actions = require "telescope.actions"
+    local actions_layout = require "telescope.actions.layout"
+    local mappings = {
+        i = {
+            -- ["<C-j>"] = actions.move_selection_next,
+            -- ["<C-k>"] = actions.move_selection_previous,
+            -- ["<C-n>"] = actions.cycle_history_next,
+            -- ["<C-p>"] = actions.cycle_history_prev,
+            ["?"] = actions_layout.toggle_preview,
+            ["<C-h>"] = "which_key",
+            -- https://github.com/nvim-telescope/telescope.nvim/blob/ccda9f02f3a7e48a4a84fb3c3e853d176af8bdd3/lua/telescope/actions/init.lua#L941
+            ["<C-c><C-o>"] = function(prompt_bufnr) actions.smart_send_to_qflist(prompt_bufnr) actions.open_qflist(prompt_bufnr) end,
+        },
+    }
+    return mappings
+end
 -- End Telescope Keybindings
 
 
+
+return {
+    telescope_mappings = telescope_mappings
+}
