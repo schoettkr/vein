@@ -58,6 +58,16 @@ vim.keymap.set('n', '<leader>en', vim.diagnostic.goto_next)
 
 -- Telescope Keybindings
 -- See `:help telescope.builtin`
+local telescope = require('telescope.builtin')
+vim.keymap.set('n', '<leader>pp', telescope.find_files, { desc = 'Find project files'})
+vim.keymap.set('n', '<leader>pf', telescope.find_files, { desc = 'Find project files'})
+vim.keymap.set('n', '<leader>fr', telescope.oldfiles, { desc = 'Find recently opened files' })
+vim.keymap.set('n', '<leader>p/', telescope.live_grep, { desc = 'Search string in project' })
+vim.keymap.set('n', '<leader>pw', telescope.grep_string, { desc = 'Search string under cursor' })
+vim.keymap.set('n', '<leader>bb', telescope.buffers, { desc = 'Browse buffers' })
+vim.keymap.set('n', '<leader>/', telescope.current_buffer_fuzzy_find, { desc = 'Search in current buffer' })
+
+
 -- vim.keymap.set('n', '<leader>fr', require('telescope.builtin').oldfiles, { desc = 'Find recently opened files' })
 -- vim.keymap.set('n', '<leader>bb', require('telescope.builtin').buffers, { desc = 'Browse buffers' })
 -- vim.keymap.set('n', '<leader>/', function()
