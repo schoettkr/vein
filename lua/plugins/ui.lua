@@ -3,8 +3,14 @@ return {
   {
     'navarasu/onedark.nvim',
     priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'onedark'
+    opts = {
+      style = 'cool',
+      transparent = true
+    },
+    config = function(_, opts)
+      local onedark = require "onedark"
+      onedark.setup(opts)
+      onedark.load()
     end,
   },
   { -- Set lualine as statusline
