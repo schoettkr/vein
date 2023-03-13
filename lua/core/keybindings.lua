@@ -167,9 +167,16 @@ function treesitter_incselection_mappings()
 end
 -- End Treesitter Keybindings
 
+-- Filetree Keybindings
+function filetree_mappings()
+    vim.keymap.set('n', '<leader>ft', "<cmd>Fern . -drawer -width=40 -toggle<cr>", { desc = 'File Explorer'})
+end
+-- End Filetree Keybindings
+
 return {
 	telescope_mappings = telescope_mappings,
 	telescope_builtin_mappings = telescope_builtin_mappings,
 	treesitter_textobject_mappings = treesitter_textobject_mappings,
 	treesitter_incselection_mappings = treesitter_incselection_mappings,
+  filetree_mappings = filetree_mappings
 }
