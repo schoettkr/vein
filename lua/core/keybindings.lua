@@ -58,16 +58,18 @@ vim.keymap.set('n', '<leader>en', vim.diagnostic.goto_next)
 
 -- Telescope Keybindings
 -- See `:help telescope.builtin`
-local telescope = require('telescope.builtin')
-vim.keymap.set('n', '<leader>pp', telescope.find_files, { desc = 'Find project files'})
-vim.keymap.set('n', '<leader>pf', telescope.find_files, { desc = 'Find project files'})
-vim.keymap.set('n', '<leader>fr', telescope.oldfiles, { desc = 'Find recently opened files' })
-vim.keymap.set('n', '<leader>p/', telescope.live_grep, { desc = 'Search string in project' })
-vim.keymap.set('n', '<leader>pw', telescope.grep_string, { desc = 'Search string under cursor' })
-vim.keymap.set('n', '<leader>bb', telescope.buffers, { desc = 'Browse buffers' })
-vim.keymap.set('n', '<leader>/', telescope.current_buffer_fuzzy_find, { desc = 'Search in current buffer' })
-vim.keymap.set('n', '<leader>\'', telescope.resume, { desc = 'Resume last picker' })
-vim.keymap.set('n', '<C-c><C-o>', telescope.quickfix, { desc = 'Show quickfix list' })
+function telescope_builtin_mappings()
+    local telescope = require('telescope.builtin')
+    vim.keymap.set('n', '<leader>pp', telescope.find_files, { desc = 'Find project files'})
+    vim.keymap.set('n', '<leader>pf', telescope.find_files, { desc = 'Find project files'})
+    vim.keymap.set('n', '<leader>fr', telescope.oldfiles, { desc = 'Find recently opened files' })
+    vim.keymap.set('n', '<leader>p/', telescope.live_grep, { desc = 'Search string in project' })
+    vim.keymap.set('n', '<leader>pw', telescope.grep_string, { desc = 'Search string under cursor' })
+    vim.keymap.set('n', '<leader>bb', telescope.buffers, { desc = 'Browse buffers' })
+    vim.keymap.set('n', '<leader>/', telescope.current_buffer_fuzzy_find, { desc = 'Search in current buffer' })
+    vim.keymap.set('n', '<leader>\'', telescope.resume, { desc = 'Resume last picker' })
+    vim.keymap.set('n', '<C-c><C-o>', telescope.quickfix, { desc = 'Show quickfix list' })
+end
 -- vim.keymap.set('n', '<C-c> <C-o>', telescope.quickfixhistory, { desc = 'Show quickfix history' })
 
 function telescope_mappings()
@@ -167,6 +169,7 @@ end
 
 return {
 	telescope_mappings = telescope_mappings,
+	telescope_builtin_mappings = telescope_builtin_mappings,
 	treesitter_textobject_mappings = treesitter_textobject_mappings,
 	treesitter_incselection_mappings = treesitter_incselection_mappings,
 }

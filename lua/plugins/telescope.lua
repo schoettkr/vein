@@ -19,6 +19,8 @@ return {
     config = function (_, _)
       local telescope = require "telescope"
 
+      require('core.keybindings').telescope_builtin_mappings()
+
       local opts = {
         defaults = {
           mappings = require('core.keybindings').telescope_mappings(),
