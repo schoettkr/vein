@@ -173,6 +173,10 @@ function filetree_mappings()
 end
 -- End Filetree Keybindings
 
+-- Git Keybdinings
+vim.keymap.set('n', '<leader>gs', "<cmd>Neogit<CR>", { desc = 'Git status'})
+-- End Git Keybdinings
+
 return {
 	telescope_mappings = telescope_mappings,
 	telescope_builtin_mappings = telescope_builtin_mappings,
