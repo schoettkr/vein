@@ -4,7 +4,7 @@ return {
     'navarasu/onedark.nvim',
     priority = 1000,
     opts = {
-      style = 'cool',
+--      style = 'cool',
       transparent = true
     },
     config = function(_, opts)
