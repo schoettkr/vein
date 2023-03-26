@@ -192,6 +192,19 @@ end
 vim.keymap.set('n', '<leader>gs', "<cmd>Neogit<CR>", { desc = 'Git status'})
 -- End Git Keybdinings
 
+-- Dired Keybindings
+vim.keymap.set('n', '<leader>ad', "<cmd>Dired<CR>", { desc = 'Dired'})
+
+    map = vim.api.nvim_buf_set_keymap
+    opt = { silent = true, noremap = true }
+    vim.api.nvim_create_autocmd("FileType", {
+        pattern = "dired",
+        callback = function()
+            map(0, "n", "q", "<cmd>bdelete<CR>", opt)
+        end,
+    })
+-- End Dired Keybindings
+
 return {
 	telescope_mappings = telescope_mappings,
 	telescope_builtin_mappings = telescope_builtin_mappings,
