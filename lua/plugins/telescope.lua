@@ -47,21 +47,6 @@ return {
     "nvim-telescope/telescope-file-browser.nvim",
     dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
     config = function()
-      vim.api.nvim_set_keymap(
-        "n",
-        "<space>fp",
-        ":Telescope file_browser<CR>",
-        { noremap = true }
-      )
-
-      vim.api.nvim_set_keymap(
-        "n",
-        "<space>ff",
-        ":Telescope file_browser path=%:p:h select_buffer=true<CR>",
-        { noremap = true }
-      )
-
-
       require("telescope").setup {
         extensions = {
           file_browser = {
@@ -82,5 +67,12 @@ return {
       pcall(require("telescope").load_extension "file_browser")
 
     end
-  }
+  },
+  -- use zellij/tmux for this
+  -- {
+  --   'nvim-telescope/telescope-project.nvim' ,
+  --   config = function()
+  --     pcall(require("telescope").load_extension "project")
+  --   end
+  -- }
 }
