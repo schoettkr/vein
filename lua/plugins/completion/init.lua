@@ -1,7 +1,7 @@
 return {
   {
     'hrsh7th/nvim-cmp',
-    dependencies = { 
+    dependencies = {
       'hrsh7th/cmp-nvim-lsp',
       'saadparwaiz1/cmp_luasnip',
       "hrsh7th/cmp-buffer",
@@ -20,8 +20,8 @@ return {
           end,
         },
         mapping = cmp.mapping.preset.insert {
-          ['<C-d>'] = cmp.mapping.scroll_docs( -4),
-          ['<C-f>'] = cmp.mapping.scroll_docs(4),
+          ['<C-u>'] = cmp.mapping.scroll_docs(-4),
+          ['<C-d>'] = cmp.mapping.scroll_docs(4),
           ['<C-Space>'] = cmp.mapping.complete {},
           ['<CR>'] = cmp.mapping.confirm {
             behavior = cmp.ConfirmBehavior.Replace,
@@ -39,8 +39,8 @@ return {
           ['<S-Tab>'] = cmp.mapping(function(fallback)
             if cmp.visible() then
               cmp.select_prev_item()
-            elseif luasnip.jumpable( -1) then
-              luasnip.jump( -1)
+            elseif luasnip.jumpable(-1) then
+              luasnip.jump(-1)
             else
               fallback()
             end
@@ -89,9 +89,12 @@ return {
         function()
           return require("luasnip").jumpable(1) and "<Plug>luasnip-jump-next" or "<C-j>"
         end,
-        expr = true, remap = true, silent = true, mode = "i",
+        expr = true,
+        remap = true,
+        silent = true,
+        mode = "i",
       },
-      { "<C-j>", function() require("luasnip").jump(1) end, mode = "s" },
+      { "<C-j>", function() require("luasnip").jump(1) end,  mode = "s" },
       { "<C-k>", function() require("luasnip").jump(-1) end, mode = { "i", "s" } },
     },
     config = function(_, opts)
