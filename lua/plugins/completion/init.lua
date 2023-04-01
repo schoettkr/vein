@@ -1,33 +1,33 @@
 return {
   {
-    'hrsh7th/nvim-cmp',
+    "hrsh7th/nvim-cmp",
     dependencies = {
-      'hrsh7th/cmp-nvim-lsp',
-      'saadparwaiz1/cmp_luasnip',
+      "hrsh7th/cmp-nvim-lsp",
+      "saadparwaiz1/cmp_luasnip",
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
     },
     config = function()
-      local cmp = require 'cmp'
-      local luasnip = require 'luasnip'
+      local cmp = require("cmp")
+      local luasnip = require("luasnip")
 
-      luasnip.config.setup {}
+      luasnip.config.setup({})
 
-      cmp.setup {
+      cmp.setup({
         snippet = {
           expand = function(args)
             luasnip.lsp_expand(args.body)
           end,
         },
-        mapping = cmp.mapping.preset.insert {
-          ['<C-u>'] = cmp.mapping.scroll_docs(-4),
-          ['<C-d>'] = cmp.mapping.scroll_docs(4),
-          ['<C-Space>'] = cmp.mapping.complete {},
-          ['<CR>'] = cmp.mapping.confirm {
+        mapping = cmp.mapping.preset.insert({
+          ["<C-u>"] = cmp.mapping.scroll_docs(-4),
+          ["<C-d>"] = cmp.mapping.scroll_docs(4),
+          ["<C-Space>"] = cmp.mapping.complete({}),
+          ["<CR>"] = cmp.mapping.confirm({
             behavior = cmp.ConfirmBehavior.Replace,
             select = true,
-          },
-          ['<Tab>'] = cmp.mapping(function(fallback)
+          }),
+          ["<Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
               cmp.select_next_item()
             elseif luasnip.expand_or_jumpable() then
@@ -35,8 +35,8 @@ return {
             else
               fallback()
             end
-          end, { 'i', 's' }),
-          ['<S-Tab>'] = cmp.mapping(function(fallback)
+          end, { "i", "s" }),
+          ["<S-Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
               cmp.select_prev_item()
             elseif luasnip.jumpable(-1) then
@@ -44,17 +44,17 @@ return {
             else
               fallback()
             end
-          end, { 'i', 's' }),
-        },
+          end, { "i", "s" }),
+        }),
         sources = {
           { name = "nvim_lsp_signature_help" },
-          { name = 'nvim_lsp' },
+          { name = "nvim_lsp" },
           { name = "luasnip" },
           { name = "buffer" },
           { name = "path" },
         },
-      }
-    end
+      })
+    end,
   },
   {
     "L3MON4D3/LuaSnip",
@@ -100,8 +100,8 @@ return {
     config = function(_, opts)
       require("luasnip").setup(opts)
 
-      local snippets_folder = vim.fn.stdpath "config" .. "/lua/plugins/completion/snippets/"
-      require("luasnip.loaders.from_lua").lazy_load { paths = snippets_folder }
+      local snippets_folder = vim.fn.stdpath("config") .. "/lua/plugins/completion/snippets/"
+      require("luasnip.loaders.from_lua").lazy_load({ paths = snippets_folder })
 
       vim.api.nvim_create_user_command("LuaSnipEdit", function()
         require("luasnip.loaders.from_lua").edit_snippet_files()

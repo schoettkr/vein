@@ -5,7 +5,7 @@ return {
     build = ":TSUpdate",
     event = "BufReadPost",
     config = function()
-      require("nvim-treesitter.configs").setup {
+      require("nvim-treesitter.configs").setup({
         ensure_installed = {
           "bash",
           "cpp",
@@ -28,10 +28,9 @@ return {
         },
         highlight = { enable = true },
         indent = { enable = true, disable = { "python" } },
-	textobjects = require('core.keybindings').treesitter_textobject_mappings(),
-	incremental_selection =  require('core.keybindings').treesitter_incselection_mappings(),
-      }
+        textobjects = require("core.keybindings").treesitter_textobject_mappings(),
+        incremental_selection = require("core.keybindings").treesitter_incselection_mappings(),
+      })
     end,
   },
 }
-

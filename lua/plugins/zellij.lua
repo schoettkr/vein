@@ -1,8 +1,8 @@
 return {
   {
-    'Lilja/zellij.nvim',
+    "Lilja/zellij.nvim",
     config = function()
-      require('zellij').setup({})
-    end
-  }
+      require("zellij").setup({})
+    end,
+  },
 }

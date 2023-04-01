@@ -3,51 +3,51 @@ return {
   -- Only load if `make` is available. Make sure you have the system
   -- requirements installed.
   {
-    'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    "nvim-telescope/telescope.nvim",
+    tag = "0.1.1",
     -- or                              , branch = '0.1.1',
-    dependencies = { 'nvim-lua/plenary.nvim' },
+    dependencies = { "nvim-lua/plenary.nvim" },
     opts = {
       defaults = {
         mappings = {
           i = {
-            ['<C-u>'] = false,
-            ['<C-d>'] = false,
+            ["<C-u>"] = false,
+            ["<C-d>"] = false,
           },
         },
-      }
+      },
     },
-    config = function (_, _)
-      local telescope = require "telescope"
+    config = function(_, _)
+      local telescope = require("telescope")
 
-      require('core.keybindings').telescope_builtin_mappings()
+      require("core.keybindings").telescope_builtin_mappings()
 
       local opts = {
         defaults = {
-          mappings = require('core.keybindings').telescope_mappings(),
-        }
+          mappings = require("core.keybindings").telescope_mappings(),
+        },
       }
       telescope.setup(opts)
-
-    end
+    end,
   },
   {
-    'nvim-telescope/telescope-fzf-native.nvim',
+    "nvim-telescope/telescope-fzf-native.nvim",
     -- NOTE: If you are having trouble with this installation,
     --       refer to the README for telescope-fzf-native for more instructions.
-    build = 'make',
+    build = "make",
     cond = function()
-      return vim.fn.executable 'make' == 1
+      return vim.fn.executable("make") == 1
     end,
     config = function(telescope)
       -- Enable telescope fzf native, if installed
-      pcall(require('telescope').load_extension, 'fzf')
-    end
+      pcall(require("telescope").load_extension, "fzf")
+    end,
   },
   {
     "nvim-telescope/telescope-file-browser.nvim",
     dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
     config = function()
-      require("telescope").setup {
+      require("telescope").setup({
         extensions = {
           file_browser = {
             theme = "ivy",
@@ -63,10 +63,9 @@ return {
             },
           },
         },
-                                 }
-      pcall(require("telescope").load_extension "file_browser")
-
-    end
+      })
+      pcall(require("telescope").load_extension("file_browser"))
+    end,
   },
   -- use zellij/tmux for this
   -- {

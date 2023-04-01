@@ -1,12 +1,12 @@
 return {
   {
-    'sindrets/diffview.nvim',
-    dependencies = { 'nvim-tree/nvim-web-devicons' }
+    "sindrets/diffview.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
   },
 
   {
-    'TimUntersberger/neogit',
-    dependencies = { 'nvim-lua/plenary.nvim' },
+    "TimUntersberger/neogit",
+    dependencies = { "nvim-lua/plenary.nvim" },
     opts = {
       integrations = {
         -- Neogit only provides inline diffs. If you want a more traditional way to look at diffs, you can use `sindrets/diffview.nvim`.
@@ -21,8 +21,8 @@ return {
         --   }
         -- }
         --
-        diffview = true
+        diffview = true,
       },
-    }
-  }
+    },
+  },
 }
