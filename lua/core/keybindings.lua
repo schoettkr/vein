@@ -251,5 +251,4 @@ return {
   telescope_builtin_mappings = telescope_builtin_mappings,
   treesitter_textobject_mappings = treesitter_textobject_mappings,
   treesitter_incselection_mappings = treesitter_incselection_mappings,
-  filetree_mappings = filetree_mappings,
 }
