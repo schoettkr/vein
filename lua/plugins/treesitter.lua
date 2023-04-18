@@ -9,7 +9,7 @@ return {
         ensure_installed = {
           "bash",
           "cpp",
-          "help",
+          "vimdoc",
           "html",
           "javascript",
           "java",
