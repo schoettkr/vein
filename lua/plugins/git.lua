@@ -3,7 +3,9 @@ return {
     "sindrets/diffview.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
-
+  {
+    "tpope/vim-fugitive"
+  },
   {
     "TimUntersberger/neogit",
     dependencies = { "nvim-lua/plenary.nvim" },
@@ -25,4 +27,17 @@ return {
       },
     },
   },
+  {
+    'lewis6991/gitsigns.nvim',
+    opts = {
+      -- See `:help gitsigns.txt`
+      signs = {
+        add = { text = '+' },
+        change = { text = '~' },
+        delete = { text = '_' },
+        topdelete = { text = '‾' },
+        changedelete = { text = '~' },
+      },
+    },
+  }
 }
