@@ -196,6 +196,52 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 -- End Dired Keybindings
 
+-- Start fzf
+vim.api.nvim_set_keymap("n", "<leader>pp", "<cmd>lua require('fzf-lua').files()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>pf", "<cmd>lua require('fzf-lua').files()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>p/",
+  "<cmd>lua require('fzf-lua').live_grep()<CR>",
+  { noremap = true, silent = true }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>pw",
+  "<cmd>lua require('fzf-lua').grep_cword()<CR>",
+  { noremap = true, silent = true }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>pW",
+  "<cmd>lua require('fzf-lua').grep_cWORD()<CR>",
+  { noremap = true, silent = true }
+)
+vim.api.nvim_set_keymap("n", "<leader>/", "<cmd>lua require('fzf-lua').blines()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>'", "<cmd>lua require('fzf-lua').resume()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>lq",
+  "<cmd>lua require('fzf-lua').quickfix()<CR>",
+  { noremap = true, silent = true }
+)
+
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>fr",
+  "<cmd>lua require('fzf-lua').oldfiles()<CR>",
+  { noremap = true, silent = true }
+)
+
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>bb",
+  "<cmd>lua require('fzf-lua').buffers()<CR>",
+  { noremap = true, silent = true }
+)
+
+-- End fzf
+
 return {
   telescope_mappings = telescope_mappings,
   telescope_builtin_mappings = telescope_builtin_mappings,
