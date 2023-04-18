@@ -242,6 +242,10 @@ vim.api.nvim_set_keymap(
 
 -- End fzf
 
+-- Hop
+vim.api.nvim_set_keymap('n', '<leader><leader>', ":HopChar1<cr>", {})
+-- End Hop
+
 return {
   telescope_mappings = telescope_mappings,
   telescope_builtin_mappings = telescope_builtin_mappings,
