@@ -56,15 +56,13 @@ vim.keymap.set("n", "<leader>en", vim.diagnostic.goto_next)
 -- End Diagnostics
 
 -- Telescope Keybindings
--- See `:help telescope.builtin`
-
 vim.api.nvim_set_keymap("n", "<space>fp", ":Telescope file_browser<CR>", { noremap = true })
--- vim.api.nvim_set_keymap(
--- 	"n",
--- 	"<space>ff",
--- 	":Telescope file_browser path=%:p:h select_buffer=true<CR>",
--- 	{ noremap = true }
--- )
+vim.api.nvim_set_keymap(
+  "n",
+  "<space>ff",
+  ":Telescope file_browser path=%:p:h select_buffer=true<CR>",
+  { noremap = true }
+)
 
 function telescope_builtin_mappings()
   local telescope = require("telescope.builtin")
