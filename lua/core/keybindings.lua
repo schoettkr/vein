@@ -184,10 +184,11 @@ function filetree_mappings()
   -- vim.keymap.set('n', '<leader>ft', "<cmd>Fern . -drawer -width=40 -toggle<cr>", { desc = 'File Explorer' })
 end
 
-vim.keymap.set("n", "<leader>ft", "<cmd>NnnExplorer<CR>", { desc = "NNN Sidebar" })
-vim.keymap.set("n", "<leader>fT", "<cmd>NnnExplorer %:p:h<CR>", { desc = "NNN Sidebar ." })
-vim.keymap.set("n", "<leader>ff", "<cmd>NnnPicker %:p:h<CR>", { desc = "NNN Picker ." })
-vim.keymap.set("n", "<leader>fF", "<cmd>NnnPicker<CR>", { desc = "NNN Picker" })
+vim.keymap.set("n", "<leader>ft", "<cmd>SidebarNvimToggle<CR>", { desc = "Sidebar" })
+-- vim.keymap.set("n", "<leader>ft", "<cmd>NnnExplorer<CR>", { desc = "NNN Sidebar" })
+-- vim.keymap.set("n", "<leader>fT", "<cmd>NnnExplorer %:p:h<CR>", { desc = "NNN Sidebar ." })
+-- vim.keymap.set("n", "<leader>ff", "<cmd>NnnPicker %:p:h<CR>", { desc = "NNN Picker ." })
+-- vim.keymap.set("n", "<leader>fF", "<cmd>NnnPicker<CR>", { desc = "NNN Picker" })
 
 -- End Filetree Keybindings
 
