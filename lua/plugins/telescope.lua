@@ -47,14 +47,17 @@ return {
     "nvim-telescope/telescope-file-browser.nvim",
     dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
     config = function()
+      local fb_actions = require("telescope").extensions.file_browser.actions
       require("telescope").setup({
         extensions = {
           file_browser = {
             theme = "ivy",
             -- disables netrw and use telescope-file-browser in its place
-            hijack_netrw = true,
+            hijack_netrw = false,
             mappings = {
               ["i"] = {
+                ["+"] = fb_actions.create,
+                ["<C-h>"] = fb_actions.toggle_hidden,
                 -- your custom insert mode mappings
               },
               ["n"] = {
