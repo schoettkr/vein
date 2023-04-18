@@ -182,9 +182,26 @@ vim.keymap.set("n", "<leader>gs", "<cmd>Neogit<CR>", { desc = "Git status" })
 -- End Git Keybdinings
 
 -- Dired Keybindings
-vim.keymap.set("n", "<leader>ad", "<cmd>Dired<CR>", { desc = "Dired" })
-kmap = vim.api.nvim_buf_set_keymap
-opt = { silent = true, noremap = true }
+vim.api.nvim_set_keymap("n", "<leader>ad", "", {
+  desc = "File Manager .",
+  callback = function()
+    vim.cmd("e %:p:h")
+    vim.api.nvim_buf_set_option(0, "bufhidden", "hide")
+    vim.api.nvim_buf_set_option(0, "buflisted", true)
+  end,
+})
+vim.api.nvim_set_keymap("n", "<leader>aD", "", {
+  desc = "File Manager (root)",
+  callback = function()
+    vim.cmd("e .")
+    vim.api.nvim_buf_set_option(0, "bufhidden", "hide")
+    vim.api.nvim_buf_set_option(0, "buflisted", true)
+  end,
+})
+
+-- vim.keymap.set("n", "<leader>ad", "<cmd>Dired<CR>", { desc = "Dired" })
+local kmap = vim.api.nvim_buf_set_keymap
+local opt = { silent = true, noremap = true }
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "dired",
   callback = function()
